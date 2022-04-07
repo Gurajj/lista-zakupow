@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;1,700&display=swap');
+
+$borders: #a6abbd; 
+$font-color: #252d42;
+
+
+
+body { 
+    margin: 0; 
+    font-size: 16px;
+    background-image: linear-gradient(to right top, #38507f, #55658e, #707c9e, #8b93ad, #a6abbd);
+    font-family: 'PT Sans', sans-serif;
+    color: $font-color
+}
+
+h3 { 
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #38507F;
+    color: $font-color;
+}
+
+.container { 
+    max-width: 1140px;
+    margin: 300px auto;
+    
+    .input{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;;
+
+        .input-options {
+            display: flex;
+            justify-content: center;
+            
+            input {
+                width: 200px;
+                height: 30px;
+                margin-bottom: 10px;
+            }
+
+            .input-list { 
+
+            }
+        }
+        .btn {
+            margin: auto;
+            justify-items: center;
+            width: 100px;
+        }
+    }
+
+    .main-wraper {
+        display: flex;
+        justify-content: space-between;    
+        
+        .left-sidebar { 
+            border: 3px solid $borders;
+            padding: 25px 10px;
+            border-radius: 5%;
+            flex-basis: 25%;
+
+            ul { 
+                padding: 0;
+
+                li {
+                    list-style-type: none;
+                    text-align: center;
+
+                    a { 
+                        text-decoration: none;
+                        color: $font-color;
+                        transition: 0.5s;
+                    }
+                    
+                    a:hover {
+                        font-size: 20px;
+                    }
+
+                    .active {
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .main-list{
+            flex-basis: 65%;
+            border: 3px solid $borders;
+            padding: 25px 10px;
+            border-radius: 5%;
+
+            h3 {
+                text-align: center;
+            }
+            
+
+            .shoping { 
+                display: none;
+            }
+
+            .title-shoping {
+                border-bottom: none;
+            }
+
+            .active {
+                display: block;
+            }
+        }
+    }
+}
+
