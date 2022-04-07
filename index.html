@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8e790aadc1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <section class="buy-list">
+        <div class="container">
+            <div class="input">
+                <div class="input-options">
+                    <input list="categories" class="input-list">
+                    <datalist id="categories">
+                    <option value="Nabial">
+                    <option value="Mięso">
+                    <option value="Pieczywo">
+                    <option value="Alkohol">
+                    <option value="Inne">
+                    </datalist>
+                    <input id="text" placeholder="Wprowadz przedmiot do kupienia" class="input-text">
+                </div>
+                <button class="btn">Dodaj przedmiot do listy zakupów</button>
+            </div>
+            <div class="main-wraper">
+                <div class="left-sidebar">
+                    <h3>Kategorie</h3>
+                    <ul class="list category-list">
+                    </ul>
+                </div>
+                <div class="main-list">
+                    <h3>Lista zakupów</h3>
+                    <div class="shoping active" category="Nabial">
+                        <ul class="shoping-list">
+                        </ul>                        
+                    </div>
+                    <div class="shoping" category="Mięso">
+                        <ul class="shoping-list">
+                        </ul>                        
+                    </div>
+                    <div class="shoping" category="Pieczywo">
+                        <ul class="shoping-list">
+                        </ul>                        
+                    </div>
+                    <div class="shoping" category="Alkohol">
+                        <ul class="shoping-list">
+                        </ul>                        
+                    </div>
+                    <div class="shoping" category="Inne">
+                        <ul class="shoping-list">
+                        </ul>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script id="shoping-left-side" type="text/x-handlebars-template">
+        {{#each arrayCategories}}
+          <li><a href="#{{ category }}">{{ category }}</a></li>
+        {{/each}}
+    </script>
+    <script id="title" type="text/x-handlebars-template">
+          <h3 class="title-shoping">{{a}}</h3>
+            <ul class="shoping-list"></ul>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
